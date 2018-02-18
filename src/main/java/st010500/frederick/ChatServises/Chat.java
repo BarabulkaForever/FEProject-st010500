@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Chat
 {
-    private static int PORT_NUMBER = 4444;
+    private static int PORT_NUMBER = 12345;
     private static ServerSocket SOCKET = null;
     protected static List<ChatClient> chatClients = new ArrayList<>();
 
@@ -20,11 +20,12 @@ public class Chat
         try
         {
             SOCKET = new ServerSocket(PORT_NUMBER);
+            System.err.println("Chat server started!!!");
             acceptClients();
         }
         catch (IOException e)
         {
-            System.err.println("Could not listen on port " + PORT_NUMBER);
+            System.out.println("Could not listen on port " + PORT_NUMBER);
         }
     }
 

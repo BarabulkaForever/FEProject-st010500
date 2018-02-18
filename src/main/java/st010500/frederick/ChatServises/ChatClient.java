@@ -18,6 +18,7 @@ public class ChatClient extends Chat implements Runnable {
     public ChatClient(Socket socket)
     {
         this.socket = socket;
+        System.out.println("Client created!!!");
     }
 
     @Override
