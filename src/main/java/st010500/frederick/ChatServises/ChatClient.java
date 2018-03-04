@@ -32,7 +32,7 @@ public class ChatClient extends Chat implements Runnable {
                 if(input != null) {
                     for (ChatClient client : chatClients)
                     {
-                        client.getWriter().write(input);
+                        client.getWriter().println(input);
                     }
                 }
             }
